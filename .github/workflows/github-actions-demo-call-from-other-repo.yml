@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Demo Action
-        uses: hello-world-docker-action@v1
+        uses: mbrocker/hello-world-docker-action@v1
         with:
           who-to-greet: 'friend'
