@@ -1,0 +1,20 @@
+name: hello world docker ci
+on:
+  push:
+    paths: [ hello-world-docker-action/** ]
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
+      - name: run my dockerfile
+        id: hello-actions
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: 'friend'
+
+      - name: Output the time
+        run: echo "The time was {{ steps.hello-action.outputs.time }} when the action ran"
+          
