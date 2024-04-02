@@ -1,4 +1,4 @@
-name: call action from another repo
+name: Call Action From Another Repo
 on:
   workflow_dispatch:
 
