@@ -15,4 +15,4 @@ jobs:
     steps:
       - name: "print current time"
         run: |
-          echo "time was ${{ call-workflow.output.current-time }} "
+          echo "time was ${{ needs.call-workflow.output.current-time }} "
